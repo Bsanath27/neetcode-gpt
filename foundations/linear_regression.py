@@ -8,12 +8,10 @@ class Solution:
         # Round to 5 decimal places
         X = np.array(X)
         print(X.shape)
-        weights = np.array(weights)
         print(weights.shape)
 
         y = np.dot(X,weights)
-        
-        print(y.shape)
+    
         return np.round(y,5)
 
 
@@ -22,7 +20,6 @@ class Solution:
         # Round to 5 decimal places
         model_prediction = np.array(model_prediction)
         ground_truth = np.array(ground_truth)
-        print(model_prediction.shape, ground_truth.shape)
         t1 = np.sum((model_prediction - ground_truth)**2)
         mse = 1/len(model_prediction) * t1
         return np.round(mse,5)
