@@ -21,5 +21,5 @@ class Solution:
 
         else:
             res = z
-        return round(float(res),5)
+        return np.round(res,5)
 
